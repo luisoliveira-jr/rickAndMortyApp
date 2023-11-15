@@ -1,1 +1,42 @@
-<p>character-list works!</p>
+<div class="row" infinite-scroll (scrolled)="onScrollDown()">
+  <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let character of characters">
+    <div class="card" id="cardList">
+      <div class="image">
+        <a [routerLink]="['/character-details', character.id]">
+          <img
+            [src]="character.image"
+            [alt]="character.name"
+            class="card-img-top"
+          />
+        </a>
+      </div>
+
+      <div class="card-inner">
+        <div class="header">
+          <a [routerLink]="['/character-details', character.id]">
+            <h2 class="text-info">{{ character.name | slice : 0 : 11 }}</h2>
+          </a>
+          <h4 class="text-muted">{{ character.gender }}</h4>
+          <small class="text-muted">{{ character.created | date }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound"
+  *ngIf="characters.length <= 0"
+>
+  <p>Não foram encontrados resultados.</p>
+</div>
+
+<button
+  [ngClass]="'no-hidden'"
+  *ngIf="showGoUpButton"
+  (click)="onScrollTop()"
+  type="button"
+  class="btn btn-info"
+>
+<i class="bi bi-triangle-fill"></i>
+</button>
