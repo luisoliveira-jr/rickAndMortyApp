@@ -9,11 +9,10 @@ import { Router } from '@angular/router';
 export class FormSearchComponent implements OnInit {
   constructor(private router: Router) {}
 
-  ngOnInit(): void {};
+  ngOnInit(): void {}
 
   onSearch(value: string) {
-
-    if (value && value.length > 3) {
+    if (value && value.length > 1) {
       this.router.navigate(['/character-list'], {
         queryParams: { query: value },
       });
