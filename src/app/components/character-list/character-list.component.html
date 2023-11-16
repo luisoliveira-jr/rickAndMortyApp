@@ -1,3 +1,10 @@
+<div class="row justify-content-center">
+  <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+    <img style="margin: 15px;" src="assets/img/logo.png" height="100" alt="" />
+    <app-form-search></app-form-search>
+  </div>
+  </div>
+
 <div class="row" infinite-scroll (scrolled)="onScrollDown()">
   <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let character of characters">
     <div class="card" id="cardList">
@@ -16,8 +23,6 @@
           <a [routerLink]="['/character-details', character.id]">
             <h2 class="text-info">{{ character.name | slice : 0 : 11 }}</h2>
           </a>
-          <h4 class="text-muted">{{ character.gender }}</h4>
-          <small class="text-muted">{{ character.created | date }}</small>
         </div>
       </div>
     </div>
@@ -38,5 +43,5 @@
   type="button"
   class="btn btn-info"
 >
-<i class="bi bi-triangle-fill"></i>
+  <i class="bi bi-triangle-fill"></i>
 </button>

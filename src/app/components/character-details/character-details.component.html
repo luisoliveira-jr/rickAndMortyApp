@@ -1,0 +1,29 @@
+<div class="row justify-content-center" *ngIf="character$ | async as character">
+  <div class="col-xs-12 col-sm-6 col-md-6 justify-content-center">
+    <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+      <div class="card-body d-flex flex-column align-items-start">
+        <strong class="d-inline-block mb-2 text-info">{{
+          character.status
+        }}</strong>
+        <h3 class="mb-0">
+          <a class="text-dark" href="#">{{ character.name }}</a>
+        </h3>
+        <div class="mb-1 text-muted">
+          {{ character.created | date }}
+        </div>
+        <p class="card-text mb-auto">
+          {{ character.species }} / {{ character.gender }}
+        </p>
+        <a class="text-info" (click)="onGoBack()">Voltar</a>
+      </div>
+      <img
+        class="card-img-right flex-auto d-none d-lg-block"
+        data-src="holder.js/200x250?theme=thumb"
+        alt="Thumbnail [300x300]"
+        [src]="character.image"
+        data-holder-rendered="true"
+        style="width: 200px; height: 250px"
+      />
+    </div>
+  </div>
+</div>

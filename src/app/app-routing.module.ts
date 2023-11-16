@@ -10,20 +10,20 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('./components/pages/home/home.module').then((m) => m.HomeModule),
+      import('./components/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'character-list',
     loadChildren: () =>
       import(
-        './components/pages/characters/character-list/character-list.module'
+        './components/character-list/character-list.module'
       ).then((m) => m.CharacterListModule),
   },
   {
     path: 'character-details/:id',
     loadChildren: () =>
       import(
-        './components/pages/characters/character-details/character-details.module'
+        './components/character-details/character-details.module'
       ).then((m) => m.CharacterDetailsModule),
   },
 ];

@@ -6,8 +6,8 @@ import {
   Params,
   Router,
 } from '@angular/router';
-import { Character } from '@app/shared/interfaces/character.interface';
-import { CharacterService } from '@app/shared/services/character.service';
+import { Character } from '@app/interfaces/character.interface';
+import { CharacterService } from '@app/services/character.service';
 import { take, filter } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 

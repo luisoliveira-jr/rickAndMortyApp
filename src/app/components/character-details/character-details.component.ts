@@ -1,8 +1,8 @@
-import { CharacterService } from '@app/shared/services/character.service';
+import { CharacterService } from '@app/services/character.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { Character } from '@app/shared/interfaces/character.interface';
+import { Character } from '@app/interfaces/character.interface';
 import { Observable, take } from 'rxjs';
 
 @Component({
