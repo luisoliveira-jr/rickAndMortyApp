@@ -1,5 +1,18 @@
 # RickAndMortyApp
 
+Projeto front-end utilizando Angular e Bootstrap, consumindo a API The Rick an Morty
+
+## Nesta versão, o usuário terá acesso:
+
+- Página de listagem com barra de busca e scroll infinito;
+- Página de detalhes acessada ao clicar em um dos itens da listagem;
+
+## Para rodar a aplicação localmente siga os passos a seguir:
+
+- É necessário ter o Nodejs instalado;
+- É necessário ter o Angular instalado;
+- Pelo terminal, dentro do diretório do projeto, executar o comando ng serve
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
 
 ## Development server
