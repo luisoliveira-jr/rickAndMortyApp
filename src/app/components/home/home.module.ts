@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { CharacterListComponent } from '../character-list/character-list.component';
 import { FormSearchComponent } from '../form-search/form-search.component';
 import { CharacterDetailsComponent } from '../character-details/character-details.component';
+import { HeaderComponent } from '../header/header.component';
 
 
 
